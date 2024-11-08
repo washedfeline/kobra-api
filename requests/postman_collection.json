@@ -1,0 +1,164 @@
+{
+  "info": {
+    "name": "Kobra API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "bruno",
+      "event": []
+    },
+    {
+      "name": "posts",
+      "item": [
+        {
+          "name": "Create",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": null,
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/posts",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "posts"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Maned Wolf\",\n  \"scientificName\": \"Chrysocyon brachyurus\",\n  \"description\": \"The maned wolf (Chrysocyon brachyurus) is a large canine of South America. It is found in Argentina, Brazil, Bolivia, Peru, and Paraguay, and is almost extinct in Uruguay. Its markings resemble those of foxes, but it is neither a fox nor a wolf. It is the only species in the genus Chrysocyon (meaning \\\"golden dog\\\" in Ancient Greek: χρῡσο-κύων: chryso-kyōn). \"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "FindAll",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": null,
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/posts",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "posts"
+              ],
+              "query": [],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "FindById",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": null,
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/posts/:id",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "posts",
+                ":id"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "cc9b7b06-373d-442a-84ef-88cabf76afda"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update",
+          "event": [],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "auth": null,
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/posts",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "posts"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"6d14d252-922d-4074-b2e2-ccad1d119ca2\",\n  \"name\": \"Maned Wolfa\",\n  \"scientificName\": \"Chrysocyon brachyurus\",\n  \"description\": \"The maned wolf (Chrysocyon brachyurus) is a large canine of South America. It is found in Argentina, Brazil, Bolivia, Peru, and Paraguay, and is almost extinct in Uruguay. Its markings resemble those of foxes, but it is neither a fox nor a wolf. It is the only species in the genus Chrysocyon (meaning \\\"golden dog\\\" in Ancient Greek: χρῡσο-κύων: chryso-kyōn). \",\n  \"createdAt\": \"2024-11-08T16:47:44.038Z\",\n  \"updatedAt\": \"2024-11-08T16:47:44.038Z\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Delete",
+          "event": [],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "auth": null,
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/posts/:id",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "posts",
+                ":id"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "cc9b7b06-373d-442a-84ef-88cabf76afda"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}

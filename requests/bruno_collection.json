@@ -1,0 +1,167 @@
+{
+  "name": "Kobra API",
+  "version": "1",
+  "items": [
+    {
+      "type": "folder",
+      "name": "posts",
+      "items": [
+        {
+          "type": "http",
+          "name": "Create",
+          "seq": 3,
+          "request": {
+            "url": "{{baseUrl}}/posts",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"name\": \"Maned Wolf\",\n  \"scientificName\": \"Chrysocyon brachyurus\",\n  \"description\": \"The maned wolf (Chrysocyon brachyurus) is a large canine of South America. It is found in Argentina, Brazil, Bolivia, Peru, and Paraguay, and is almost extinct in Uruguay. Its markings resemble those of foxes, but it is neither a fox nor a wolf. It is the only species in the genus Chrysocyon (meaning \\\"golden dog\\\" in Ancient Greek: χρῡσο-κύων: chryso-kyōn). \"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "FindAll",
+          "seq": 1,
+          "request": {
+            "url": "{{baseUrl}}/posts",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "FindById",
+          "seq": 2,
+          "request": {
+            "url": "{{baseUrl}}/posts/:id",
+            "method": "GET",
+            "headers": [],
+            "params": [
+              {
+                "name": "id",
+                "value": "cc9b7b06-373d-442a-84ef-88cabf76afda",
+                "type": "path",
+                "enabled": true
+              }
+            ],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Update",
+          "seq": 4,
+          "request": {
+            "url": "{{baseUrl}}/posts",
+            "method": "PUT",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"id\": \"6d14d252-922d-4074-b2e2-ccad1d119ca2\",\n  \"name\": \"Maned Wolfa\",\n  \"scientificName\": \"Chrysocyon brachyurus\",\n  \"description\": \"The maned wolf (Chrysocyon brachyurus) is a large canine of South America. It is found in Argentina, Brazil, Bolivia, Peru, and Paraguay, and is almost extinct in Uruguay. Its markings resemble those of foxes, but it is neither a fox nor a wolf. It is the only species in the genus Chrysocyon (meaning \\\"golden dog\\\" in Ancient Greek: χρῡσο-κύων: chryso-kyōn). \",\n  \"createdAt\": \"2024-11-08T16:47:44.038Z\",\n  \"updatedAt\": \"2024-11-08T16:47:44.038Z\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Delete",
+          "seq": 5,
+          "request": {
+            "url": "{{baseUrl}}/posts/:id",
+            "method": "DELETE",
+            "headers": [],
+            "params": [
+              {
+                "name": "id",
+                "value": "cc9b7b06-373d-442a-84ef-88cabf76afda",
+                "type": "path",
+                "enabled": true
+              }
+            ],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "activeEnvironmentUid": "D8pXzt26CwLXAxrHVwRCL",
+  "environments": [
+    {
+      "variables": [
+        {
+          "name": "baseUrl",
+          "value": "http://localhost:3333",
+          "enabled": true,
+          "secret": false,
+          "type": "text"
+        }
+      ],
+      "name": "Kobra"
+    }
+  ],
+  "brunoConfig": {
+    "version": "1",
+    "name": "Kobra API",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+GET http://localhost:3333/posts
+
+###
+
+GET http://localhost:3333/posts/50f96b01-7126-408d-b06c-34f7b3fb974b
+
+###
+
+POST http://localhost:3333/posts
+Content-Type: application/json
+
+{
+	"name": "Maned Wolf",
+	"scientificName": "Chrysocyon brachyurus",
+	"description": "The maned wolf (Chrysocyon brachyurus) is a large canine of South America. It is found in Argentina, Brazil, Bolivia, Peru, and Paraguay, and is almost extinct in Uruguay. Its markings resemble those of foxes, but it is neither a fox nor a wolf. It is the only species in the genus Chrysocyon (meaning \"golden dog\" in Ancient Greek: χρῡσο-κύων: chryso-kyōn). "
+}
+
+###
+
+PUT http://localhost:3333/posts
+Content-Type: application/json
+
+{
+  "id": "50f96b01-7126-408d-b06c-34f7b3fb974b",
+  "name": "Maned Wolf",
+  "scientificName": "Chrysocyon brachyurus",
+  "description": "The maned wolf (Chrysocyon brachyurus) is a large canine of South America. It is found in Argentina, Brazil, Bolivia, Peru, and Paraguay, and is almost extinct in Uruguay. Its markings resemble those of foxes, but it is neither a fox nor a wolf. It is the only species in the genus Chrysocyon (meaning \"golden dog\" in Ancient Greek: χρῡσο-κύων: chryso-kyōn). ",
+  "createdAt": "2024-11-08T16:36:49.784Z",
+  "updatedAt": "2024-11-08T16:36:49.784Z"
+}
+
+###
+
+DELETE http://localhost:3333/posts/50f96b01-7126-408d-b06c-34f7b3fb974b

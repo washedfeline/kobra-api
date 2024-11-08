@@ -1,6 +1,4 @@
-import express from "express";
-
-const app = express();
+import app from "./core/app";
 
 const PORT = 3333;
 
